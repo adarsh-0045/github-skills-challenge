@@ -6,12 +6,15 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
+  issues: write
   pull-requests: write
 
 jobs:
   coverage:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
 
     steps:
       - name: Check out repository
