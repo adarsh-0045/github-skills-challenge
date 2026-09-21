@@ -13,6 +13,8 @@ permissions:
 jobs:
   coverage:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
 
     steps:
       - name: Check out repository
